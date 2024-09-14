@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip> // For setting precision
 using namespace std;
 
 int main() {
@@ -9,12 +10,12 @@ int main() {
     cout << "Enter your first number: ";
     cin >> num1;
     
-    // Input second numberF
+    // Input second number
     cout << "Enter your second number: ";
     cin >> num2;
     
     // Input operation
-    cout << "Enter the operation (+, -, *, or /): ";ٖ
+    cout << "Enter the operation (+, -, *, or /): ";
     cin >> op;
 
     double result; // The final result after applying the operation
@@ -50,8 +51,9 @@ int main() {
     
     // Print result only if the operation was valid
     if (validOperation) {
+        cout << fixed << setprecision(2); // Set precision for better readability
         cout << "Result: " << result << endl;
     }
-    
+    //cout<<"Result:"<<result;
     return 0; // Program ends
 }

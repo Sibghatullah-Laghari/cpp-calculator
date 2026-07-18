@@ -1,59 +1,69 @@
+/*
+ * calculator.cpp
+ * A simple command-line arithmetic calculator.
+ * Last updated: 2026-07-18
+ *
+ * Supports addition (+), subtraction (-), multiplication (*), and division (/).
+ * Division by zero is handled gracefully.
+ *
+ * Possible improvements:
+ *   - Add modulus (%) and power (^) operations.
+ *   - Allow chaining of multiple operations.
+ *   - Accept input in a single line (e.g., "3 + 5").
+ */
+
 #include <iostream>
-#include <iomanip> // For setting precision
+#include <iomanip> // For setting output precision
 using namespace std;
 
 int main() {
-    double num1, num2; // These are the two numbers on which operations will be applied
-    char op; // Stores the operation to be applied
-    
-    // Input first number
+    double num1, num2;   // operands
+    char op;             // operator (+, -, *, /)
+
+    // Prompt for first number
     cout << "Enter your first number: ";
     cin >> num1;
-    
-    // Input second number
+
+    // Prompt for second number
     cout << "Enter your second number: ";
     cin >> num2;
-    
-    // Input operation
-    cout << "Enter the operation (+, -, *, or /): ";
+
+    // Prompt for operation
+    cout << "Enter the operation (+, -, *, /): ";
     cin >> op;
 
-    double result; // The final result after applying the operation
+    double result;            // computed result
     bool validOperation = true;
-    
-    // Switch statement to apply the operation
+
+    // Perform the selected operation
     switch (op) {
         case '+':
             result = num1 + num2;
             break;
-            
         case '-':
             result = num1 - num2;
             break;
-            
         case '*':
             result = num1 * num2;
             break;
-            
         case '/':
             if (num2 != 0) {
                 result = num1 / num2;
             } else {
-                cout << "Error: Division by zero!" << endl;
+                cout << "Error: Division by zero is not allowed!" << endl;
                 validOperation = false;
             }
             break;
-            
         default:
-            cout << "Error: Invalid operation!" << endl;
+            cout << "Error: Invalid operator. Please use +, -, *, or /." << endl;
             validOperation = false;
     }
-    
-    // Print result only if the operation was valid
+
+    // Output the result if the operation was valid
     if (validOperation) {
-        cout << fixed << setprecision(2); // Set precision for better readability
+        cout << fixed << setprecision(2);   // show two decimal places
         cout << "Result: " << result << endl;
     }
-    //cout<<"Result:"<<result;
-    return 0; // Program ends
+
+    return 0;
 }

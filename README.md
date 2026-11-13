@@ -1,7 +1,7 @@
 # C++ Calculator
 
 ## Description
-This is a simple command-line calculator program written in C++. It performs basic arithmetic operations: addition, subtraction, multiplication, and division. The program prompts the user for two numbers and an operation, then displays the result.
+This is a simple command-line calculator program written in C++. It performs basic arithmetic operations: addition, subtraction, multiplication, and division. The program prompts the user for two numbers and an operation, then displays the result..
 
 ## Features
 - Addition

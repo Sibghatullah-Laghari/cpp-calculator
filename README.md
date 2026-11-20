@@ -10,7 +10,7 @@ This is a simple command-line calculator program written in C++. It performs bas
 - Division (with error handling for division by zero)
 
 ## Usage
-1. Compile the program using a C++ compiler, e.g., `g++ calculator.cpp -o calculator`.
+1. Compile the program using a C++ compiler, e.g., `g++ calculator.cpp -o calculator`..
 2. Run the executable, e.g., `./calculator`.
 3. Follow the prompts to enter numbers and select an operation.
 

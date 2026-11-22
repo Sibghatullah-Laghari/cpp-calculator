@@ -7,7 +7,7 @@ This is a simple command-line calculator program written in C++. It performs bas
 - Addition
 - Subtraction
 - Multiplication
-- Division (with error handling for division by zero)
+- Division (with error handling for division by zero).
 
 ## Usage
 1. Compile the program using a C++ compiler, e.g., `g++ calculator.cpp -o calculator`..
